@@ -4,7 +4,9 @@ import Home from "./components/Home";
 import Login from "./components/Login";
 import Create from "./components/Create"
 import Register from "./components/Register";
-import Catalog from "./components/Catalog";
+import Catalog from "./components/Catalog/Catalog";
+import Details from "./components/Details";
+import Edit from "./components/Edit"
 
 function App() {
   return (
@@ -18,6 +20,8 @@ function App() {
     <Route path="/register" element={<Register/>} />
     <Route path="/create" element={<Create/>} />
     <Route path="/catalog" element={<Catalog/>} />
+    <Route path="/details/:gameId" element={<Details/>} />
+    <Route path="/edit/:gameId" element={<Edit/>} />
     </Routes>
     </main>
 </div>

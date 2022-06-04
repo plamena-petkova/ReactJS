@@ -26,15 +26,12 @@ const Details = () => {
             <div className="game-header">
                 <img className="game-img" src="images/MineCraft.png" alt="game" />
                 <h1>{game.name}</h1>
-                <span className="levels">MaxLevel: 4</span>
-                <p className="type">Action, Crime, Fantasy</p>
+                <span className="levels">MaxLevel: {game.maxLevel}</span>
+                <p className="type">{game.category}</p>
             </div>
 
             <p className="text">
-                Set in a world where fantasy creatures live side by side with humans. A human cop is forced to work
-                with an Orc to find a weapon everyone is prepared to kill for. Set in a world where fantasy
-                creatures live side by side with humans. A human cop is forced
-                to work with an Orc to find a weapon everyone is prepared to kill for.
+               {game.summary}
             </p>
 
             <div className="details-comments">
@@ -55,7 +52,7 @@ const Details = () => {
 
             <div className="buttons">
                 <Link  to={`/edit/${game._id}`} className="button">Edit</Link >
-                <Link  to="/delete/:id" className="button">Delete</Link >
+                <Link  to={`/delete/${game._id}`} className="button">Delete</Link >
             </div>
         </div>
 
@@ -63,7 +60,7 @@ const Details = () => {
             <label>Add new comment:</label>
             <form className="form">
                 <textarea name="comment" placeholder="Comment......"></textarea>
-                <input className="btn submit" type="submit" value="Add Comment"/>
+                <input className="btn submit" type="submit" />
             </form>
         </article>
 
